@@ -9,7 +9,8 @@ read HOSTNAME
 echo -n "Do you want to install Postgres? 'y/N' > "
 read INSTALL_POSTGRES
 
-SWIFT_VERSION=swift-2.2-SNAPSHOT-2015-12-22-a-ubuntu14.04
+SWIFT_VERSION=swift-2.2-SNAPSHOT-2015-12-22-a-ubuntu14.04.tar.gz
+SWIFT_PATH = swift-2.2-SNAPSHOT-2015-12-22-a-ubuntu14.04
 
 # Basics.
 echo "============================================================================"
@@ -60,7 +61,7 @@ cd ~/
 URL=https://swift.org/builds/ubuntu1404/swift-2.2-SNAPSHOT-2015-12-22-a/$SWIFT_VERSION
 wget $URL
 tar -xvzf $SWIFT_VERSION
-echo "export PATH=~/$SWIFT_VERSION/usr/bin/:"${PATH}"" >> ~/.bashrc
+echo "export PATH=~/$SWIFT_PATH/usr/bin/:"${PATH}"" >> ~/.bashrc
 source ~/.bashrc
 
 # Import PGP keys.
